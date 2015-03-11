@@ -1,0 +1,17 @@
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\IcarusValidServer.exe.config
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\server.ini
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\IcarusValidServer.exe
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\IcarusValidServer.pdb
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\IcarusCommons.dll
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\MongoDB.Bson.dll
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\MongoDB.Driver.dll
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\Scs.dll
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\NLog.dll
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\IcarusCommons.pdb
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\MongoDB.Bson.xml
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\MongoDB.Driver.xml
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\Scs.xml
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\bin\Debug\NLog.xml
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\obj\Debug\IcarusValidServer.csprojResolveAssemblyReference.cache
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\obj\Debug\IcarusValidServer.exe
+F:\MyDoc\Working\IcarusEMU\IcarusEMU\IcarusValidServer\obj\Debug\IcarusValidServer.pdb

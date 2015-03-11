@@ -1,0 +1,13 @@
+F:\MyDoc\Working\IcarusEMU\BMP\bin\Debug\BMP.exe.config
+F:\MyDoc\Working\IcarusEMU\BMP\bin\Debug\BMP.exe
+F:\MyDoc\Working\IcarusEMU\BMP\bin\Debug\BMP.pdb
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\BMP.csprojResolveAssemblyReference.cache
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\MainWindow.baml
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\MainWindow.g.cs
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\App.g.cs
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\BMP_MarkupCompile.cache
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\BMP.g.resources
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\BMP.Properties.Resources.resources
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\BMP.csproj.GenerateResource.Cache
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\BMP.exe
+F:\MyDoc\Working\IcarusEMU\BMP\obj\Debug\BMP.pdb

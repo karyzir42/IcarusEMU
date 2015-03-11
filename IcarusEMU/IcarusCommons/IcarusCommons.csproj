@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{114E2118-BC9C-43AF-A00B-9054DDE4E4AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IcarusCommons</RootNamespace>
+    <AssemblyName>IcarusCommons</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\IcarusEMU\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\IcarusEMU\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\IcarusEMU\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\..\[NP]Svn\nightmare\nightmare\bin\Debug\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Scs">
+      <HintPath>..\IcarusEMU\packages\SCS.1.1.0.1\lib\net40\Scs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstractions\AIcarusObject.cs" />
+    <Compile Include="Abstractions\Creature\ACreature.cs" />
+    <Compile Include="Configurations\CIniLoader.cs" />
+    <Compile Include="DAO\MongoDatabase\MongoDb.cs" />
+    <Compile Include="DAO\MongoDatabase\MongoIdFactory.cs" />
+    <Compile Include="Data\DataLoader.cs" />
+    <Compile Include="Instance.cs" />
+    <Compile Include="Models\Account\AccountData.cs" />
+    <Compile Include="Models\Battle\BattleModel.cs" />
+    <Compile Include="Models\Battle\Skill.cs" />
+    <Compile Include="Models\Bridge\GameServerData.cs" />
+    <Compile Include="Models\Bridge\LobbyServerData.cs" />
+    <Compile Include="Models\Bridge\TokenData.cs" />
+    <Compile Include="Models\Creature\Mob.cs" />
+    <Compile Include="Models\Player\ClassEnum.cs" />
+    <Compile Include="Models\Player\Player.cs" />
+    <Compile Include="Models\Player\PlayerData.cs" />
+    <Compile Include="Models\Player\SexEnum.cs" />
+    <Compile Include="Models\Storage\StorageEnum.cs" />
+    <Compile Include="Network\ABinRecvPacket.cs" />
+    <Compile Include="Network\ABinSendPacket.cs" />
+    <Compile Include="Network\Interface\IConnection.cs" />
+    <Compile Include="Network\TcpServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structures\Chat\ChatChannelsEnum.cs" />
+    <Compile Include="Structures\Chat\ChatColorsEnum.cs" />
+    <Compile Include="Structures\Global\Instance.cs" />
+    <Compile Include="Structures\Global\MapDataRegion.cs" />
+    <Compile Include="Structures\Global\Position.cs" />
+    <Compile Include="Structures\Inventory\Item.cs" />
+    <Compile Include="Structures\Inventory\PlayerStorage.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+    <Compile Include="Utils\Log.cs" />
+    <Compile Include="Utils\ProtocolBuffersProcessor.cs" />
+    <Compile Include="Utils\TaskProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

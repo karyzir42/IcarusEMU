@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24E76DCD-B034-48A6-9E24-EA510D4AD6ED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IcarusLoginServer</RootNamespace>
+    <AssemblyName>IcarusLoginServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IcarusCommons">
+      <HintPath>..\IcarusCommons\bin\Debug\IcarusCommons.dll</HintPath>
+    </Reference>
+    <Reference Include="Scs">
+      <HintPath>..\IcarusEMU\packages\SCS.1.1.0.1\lib\net40\Scs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoginServer.cs" />
+    <Compile Include="Managers\LoginManager.cs" />
+    <Compile Include="Network\Connection.cs" />
+    <Compile Include="Network\PacketHandler.cs" />
+    <Compile Include="Network\Packets\Processors\ARecvPacket.cs" />
+    <Compile Include="Network\Packets\Processors\ASendPacket.cs" />
+    <Compile Include="Network\Packets\Recv\CM_AUTH.cs" />
+    <Compile Include="Network\Packets\Recv\CM_PING.cs" />
+    <Compile Include="Network\Packets\Recv\CM_SELECTSERVER.cs" />
+    <Compile Include="Network\Packets\Recv\CM_SERVER_LIST.cs" />
+    <Compile Include="Network\Packets\Send\SM_AUTH.cs" />
+    <Compile Include="Network\Packets\Send\SM_PONG.cs" />
+    <Compile Include="Network\Packets\Send\SM_SELECTSERVER.cs" />
+    <Compile Include="Network\Packets\Send\SM_SERVER_LIST.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK1.cs" />
+    <Compile Include="Network\Protocols\WireLoginProtocol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthorizationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="server.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<blocks>
+	 <block id="region_f00_001" name="사란트의 감옥" locality_output_id="region_f00_001" map_id="map_f00" resurrection_location_id="area_f00_p_0001" local_images="42" war_fog="0" npc_portal_register="0" servo_register="0" npc_icons="0" cutscene_will_trigger="0" regional_radar_images="rader_map_f00" max_height_region="1065353216" region_height_min="1065353216" effect_bright="1036831949" myactor_light="4.1_dark_in" f17="0" />
+</blocks>

@@ -1,0 +1,15 @@
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\bin\Debug\IcarusLauncher.exe.config
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\bin\Debug\IcarusLauncher.exe
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\bin\Debug\IcarusLauncher.pdb
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\bin\Debug\Scs.dll
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\bin\Debug\Scs.xml
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\IcarusLauncher.csprojResolveAssemblyReference.cache
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\MainWindow.baml
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\MainWindow.g.cs
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\App.g.cs
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\IcarusLauncher_MarkupCompile.cache
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\IcarusLauncher.g.resources
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\IcarusLauncher.Properties.Resources.resources
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\IcarusLauncher.csproj.GenerateResource.Cache
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\IcarusLauncher.exe
+F:\MyDoc\Working\IcarusEMU\IcarusLauncher\obj\Debug\IcarusLauncher.pdb

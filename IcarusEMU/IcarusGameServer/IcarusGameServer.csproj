@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BECD40C2-6993-4D99-8B4B-A79DBCD8FF7B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IcarusGameServer</RootNamespace>
+    <AssemblyName>IcarusGameServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IcarusCommons">
+      <HintPath>..\IcarusCommons\bin\Debug\IcarusCommons.dll</HintPath>
+    </Reference>
+    <Reference Include="Scs">
+      <HintPath>..\IcarusEMU\packages\SCS.1.1.0.1\lib\net40\Scs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameServer.cs" />
+    <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="Managers\ItemManager.cs" />
+    <Compile Include="Network\Connection.cs" />
+    <Compile Include="Network\PacketHandler.cs" />
+    <Compile Include="Network\Packets\Processors\ARecvPacket.cs" />
+    <Compile Include="Network\Packets\Processors\ASendPacket.cs" />
+    <Compile Include="Network\Packets\Recv\CM_CHARACTER_STYLE.cs" />
+    <Compile Include="Network\Packets\Recv\CM_CHAT.cs" />
+    <Compile Include="Network\Packets\Recv\CM_CONNECT.cs" />
+    <Compile Include="Network\Packets\Recv\CM_EMOTION.cs" />
+    <Compile Include="Network\Packets\Recv\CM_EXIT.cs" />
+    <Compile Include="Network\Packets\Recv\CM_FLY.cs" />
+    <Compile Include="Network\Packets\Recv\CM_GETAREA.cs" />
+    <Compile Include="Network\Packets\Recv\CM_INVENTORY.cs" />
+    <Compile Include="Network\Packets\Recv\CM_INVENTORY_MOVE.cs" />
+    <Compile Include="Network\Packets\Recv\CM_JUMP.cs" />
+    <Compile Include="Network\Packets\Recv\CM_MOUSESET.cs" />
+    <Compile Include="Network\Packets\Recv\CM_MOVE.cs" />
+    <Compile Include="Network\Packets\Recv\CM_MOVE_STOP.cs" />
+    <Compile Include="Network\Packets\Recv\CM_PING.cs" />
+    <Compile Include="Network\Packets\Recv\CM_REMOVE_ITEM.cs" />
+    <Compile Include="Network\Packets\Recv\CM_SELECTCHARACTERS.cs" />
+    <Compile Include="Network\Packets\Recv\CM_SKILL_LIST.cs" />
+    <Compile Include="Network\Packets\Recv\CM_SKILL_PANEL.cs" />
+    <Compile Include="Network\Packets\Recv\CM_TARGET.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UNK11.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UNK2.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UNK25.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UNK4.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UNK5.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UNK6.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UNK7.cs" />
+    <Compile Include="Network\Packets\Recv\CM_UPDATE_POSITION.cs" />
+    <Compile Include="Network\Packets\Recv\CM_USE_SKILL.cs" />
+    <Compile Include="Network\Packets\Send\SM_ANIMATION.cs" />
+    <Compile Include="Network\Packets\Send\SM_CHANGE_CHARACTER.cs" />
+    <Compile Include="Network\Packets\Send\SM_CHARACTER_STYLE.cs" />
+    <Compile Include="Network\Packets\Send\SM_CHAT_MESSAGE.cs" />
+    <Compile Include="Network\Packets\Send\SM_CONNECT.cs" />
+    <Compile Include="Network\Packets\Send\SM_DISCONNECT.cs" />
+    <Compile Include="Network\Packets\Send\SM_EMOTION.cs" />
+    <Compile Include="Network\Packets\Send\SM_ENTER_WORLD.cs" />
+    <Compile Include="Network\Packets\Send\SM_EXIT.cs" />
+    <Compile Include="Network\Packets\Send\SM_FLY.cs" />
+    <Compile Include="Network\Packets\Send\SM_GAMEOBJECT_MOVE.cs" />
+    <Compile Include="Network\Packets\Send\SM_GAMEOBJECT_SPAWN.cs" />
+    <Compile Include="Network\Packets\Send\SM_INVENTORY_RESPONSE.cs" />
+    <Compile Include="Network\Packets\Send\SM_MOUSE_MOVE.cs" />
+    <Compile Include="Network\Packets\Send\SM_MOVE.cs" />
+    <Compile Include="Network\Packets\Send\SM_PLAYER_INFO.cs" />
+    <Compile Include="Network\Packets\Send\SM_PONG.cs" />
+    <Compile Include="Network\Packets\Send\SM_REMOVE_ITEM.cs" />
+    <Compile Include="Network\Packets\Send\SM_REMOVE_ITEM_RESP.cs" />
+    <Compile Include="Network\Packets\Send\SM_SETAREA.cs" />
+    <Compile Include="Network\Packets\Send\SM_SKILL_LIST.cs" />
+    <Compile Include="Network\Packets\Send\SM_SKILL_PANEL.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK1.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK10.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK1506.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK1606.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK17.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK20.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK21.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK3.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK4.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK40.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK7.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK8.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK9.cs" />
+    <Compile Include="Network\Packets\Send\SM_UNK_25.cs" />
+    <Compile Include="Network\Packets\Send\SM_USE_SKILL.cs" />
+    <Compile Include="Network\Protocols\WireGameProtocol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GameService.cs" />
+    <Compile Include="Services\InstanceService.cs" />
+    <Compile Include="Services\StorageService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="server.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Network\WebApi\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
