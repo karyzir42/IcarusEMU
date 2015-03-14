@@ -1,6 +1,0 @@
-F:\MyDoc\Working\IcarusEMU\IcarusEMU\bin\Debug\IcarusManager.exe.config
-F:\MyDoc\Working\IcarusEMU\IcarusEMU\bin\Debug\IcarusManager.exe
-F:\MyDoc\Working\IcarusEMU\IcarusEMU\bin\Debug\IcarusManager.pdb
-F:\MyDoc\Working\IcarusEMU\IcarusEMU\obj\Debug\IcarusManger.csprojResolveAssemblyReference.cache
-F:\MyDoc\Working\IcarusEMU\IcarusEMU\obj\Debug\IcarusManager.exe
-F:\MyDoc\Working\IcarusEMU\IcarusEMU\obj\Debug\IcarusManager.pdb
