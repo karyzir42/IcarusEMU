@@ -5,10 +5,15 @@
 // Copyrights © 2014-2015 NecrozProject Team. All rights reserved.
 
 using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
+using Microsoft.CSharp;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
@@ -179,6 +184,59 @@ namespace IcarusCommons.Utils
         public static string ReverseIp(this int ip)
         {
             return BitConverter.GetBytes(ip).Reverse().ToArray().ToHex();
+        }
+    }
+    public static class ScriptsCompiler
+    {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        private static readonly CSharpCodeProvider Provider =
+            new CSharpCodeProvider(new Dictionary<string, string> { { "CompilerVersion", "v4.0" } });
+
+        private static readonly CompilerParameters CompilerParams =
+            new CompilerParameters { GenerateInMemory = true };
+
+
+        static ScriptsCompiler()
+        {
+            foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                try
+                {
+                    string location = assembly.Location;
+                    if (!string.IsNullOrEmpty(location))
+                    {
+                        CompilerParams.ReferencedAssemblies.Add(location);
+                    }
+                }
+                catch (NotSupportedException)
+                {
+                    //Log.Warn("Assembly '{0}' is dynamic, and not supported by script compiler", assembly.GetName()); 
+                }
+            }
+        }
+
+        /// <summary>
+        /// Compile type from file and return new instance by calling
+        /// constructor with selected parametres
+        /// </summary>
+        /// <typeparam name="T">Base type</typeparam>
+        /// <param name="filepath">File location</param>
+        /// <param name="param">Params</param>
+        /// <returns></returns>
+        public static T Compile<T>(string filepath, params object[] param)
+        {
+            CompilerResults results =
+                Provider.
+                    CompileAssemblyFromSource(CompilerParams, File.ReadAllText(filepath));
+
+            if (results.Errors.Count > 0)
+                foreach (CompilerError err in results.Errors)
+                    Log.Error("Script compile error\nFile: {2}\nLine: {0}\nError:{1}", err.Line, err, filepath);
+            else
+                return (T)Activator.CreateInstance(results.CompiledAssembly.GetTypes()[0], param);
+
+            return default(T);
         }
     }
 }

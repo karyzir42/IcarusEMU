@@ -59,6 +59,7 @@
     <Compile Include="Configurations\CIniLoader.cs" />
     <Compile Include="DAO\MongoDatabase\MongoDb.cs" />
     <Compile Include="DAO\MongoDatabase\MongoIdFactory.cs" />
+    <Compile Include="DAO\MySql\ADbScript.cs" />
     <Compile Include="Data\DataLoader.cs" />
     <Compile Include="Instance.cs" />
     <Compile Include="Models\Account\AccountData.cs" />

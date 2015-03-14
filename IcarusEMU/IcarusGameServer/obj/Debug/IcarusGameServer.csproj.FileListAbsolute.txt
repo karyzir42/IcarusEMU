@@ -16,3 +16,6 @@ F:\MyDoc\Working\IcarusEMU\IcarusGameServer\bin\Debug\NLog.xml
 F:\MyDoc\Working\IcarusEMU\IcarusGameServer\obj\Debug\IcarusGameServer.csprojResolveAssemblyReference.cache
 F:\MyDoc\Working\IcarusEMU\IcarusGameServer\obj\Debug\IcarusGameServer.exe
 F:\MyDoc\Working\IcarusEMU\IcarusGameServer\obj\Debug\IcarusGameServer.pdb
+D:\Users\Sagara\Documents\GitHub\IcarusEMU\IcarusEMU\IcarusGameServer\bin\Debug\IcarusGameServer.exe.config
+D:\Users\Sagara\Documents\GitHub\IcarusEMU\IcarusEMU\IcarusGameServer\obj\Debug\IcarusGameServer.exe
+D:\Users\Sagara\Documents\GitHub\IcarusEMU\IcarusEMU\IcarusGameServer\obj\Debug\IcarusGameServer.pdb

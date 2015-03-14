@@ -4,7 +4,9 @@
 // 
 // Copyrights © 2014-2015 NecrozProject Team. All rights reserved.
 
+using System.Data.Odbc;
 using System.Threading;
+using IcarusCommons.DAO.MySql;
 using IcarusCommons.Utils;
 using NLog;
 

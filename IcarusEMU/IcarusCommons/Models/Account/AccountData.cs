@@ -26,5 +26,12 @@ namespace IcarusCommons.Models.Account
         public TokenData LoginToken;
 
         public IList<PlayerData> Players { get; set; }
+
+        public AccountData(int id, string login, string password)
+        {
+            Id = id;
+            Login = login;
+            Password = password;
+        }
     }
 }

@@ -12,6 +12,7 @@ using IcarusCommons.Network;
 using IcarusCommons.Utils;
 using IcarusLoginServer.Managers;
 using IcarusLoginServer.Network;
+using IcarusLoginServer.Services;
 
 namespace IcarusLoginServer
 {
@@ -65,6 +66,7 @@ namespace IcarusLoginServer
                               "*************************\n",
                 1);
             TaskProcessor.Init();
+            DatabaseService.Initialize();//TODO
 
             TcpServer = new TcpServer<Connection>(CIniLoader.ReadValue("NETWORK", "LOGIN_IP"),
                 int.Parse(CIniLoader.ReadValue("NETWORK", "LOGIN_PORT")), 100);
